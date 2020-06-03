@@ -33,6 +33,60 @@ public class InterfazPizzeria {
                 + "3-PizzaPericolosa");
         opcion = teclado.nextInt();
         
+          switch (opcion) {
+            case 1:
+                //Opción para añadir o no ingredientes
+                System.out.println("Quieres añadirle ingredientes?\n"
+                        + "1-Si\n"
+                        + "2-No");
+                ingre = teclado.nextInt();
+                //Menú con los diferentes ingredientes a añadir
+                if (ingre == 1) {
+                    System.out.println("Elegir ingredientes:\n"
+                            + "1-Barbako\n"
+                            + "2-Verdura\n"
+                            + "3-Queso\n"
+                            + "4-Peperonni\n"
+                            + "5-Gambas\n"
+                            + "6-Atun\n"
+                            + "7-Piña\n"
+                            + "8-Bacon\n"
+                            + "9-Jamón\n"
+                            + "0-Salir");
+                    ingredientes = teclado.nextInt();
+                    /*Bucle while que seguirá añadiendo hasta que se pulse el botón 0,
+                    o hasta que el control del Array no le permita añadir más
+                    */ 
+                    while (ingredientes != 0) {
+                           //Relación con la clase PizzaBase
+                        base.añadirIngredientes(ingredientes);
+                        ingredientes = teclado.nextInt();
+                    };
+                    //Precio de la pizzaBase con ingredientes añadidos
+                    System.out.println("Producto eligido:");
+                    System.out.println(base.precioFinal() + " euros");
+                } else {
+                    //Precio de la pizzaBase sin ingrediente añadidos
+                    System.out.println("Producto eligido:");
+                    System.out.println(base.precioFinal() + " euros");
+                }
+                ;
+                break;
+
+            case 2:
+                //Precio de la pizza Lobilla
+                System.out.println("Producto eligido:");
+                System.out.println(lobi.precioFinal() + " euros");
+                break;
+
+            case 3:
+                //Precio de la pizza Pericolosa
+                System.out.println("Producto eligido:");
+                System.out.println(peri.precioFinal() + " euros");
+                break;
+
+        }
+        
     }
     
 }
