@@ -7,6 +7,7 @@ package pizzeriaLobilla;
 
 import java.util.ArrayList;
 
+
 /**
  *
  * @author Isaac
@@ -30,7 +31,8 @@ public class PizzaBase {
     private double precioTotal = 0;
     /*Variable String qu nos permitirá enviar un mensaje al usuario*/
     private String mensaje = "";
-
+ 
+    
     //Constructor con los ingredientes predeterminados
     public PizzaBase() {
         ingredientes.add("Tomate");
@@ -110,4 +112,70 @@ public class PizzaBase {
         return precioTotal = precioTotal + precio;
 
     }
+    
+    
+    //GET y SET de los diferentes Variables y Métodos
+    public double getPrecio() {
+        return precio;
+    }
+
+    public double getPrecioExtra() {
+        return precioExtra;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public void setPrecioExtra(double precioExtra) {
+        this.precioExtra = precioExtra;
+    }
+
+  
+    public int getControl() {
+        return control;
+    }
+
+    public void setControl(int control) {
+        this.control = control;
+    }
+
+    public String getMensaje() {
+        return mensaje;
+    }
+
+    public void setMensaje(String mensaje) {
+        this.mensaje = mensaje;
+    }
+
+    public ArrayList<String> getIngredientes() {
+        return ingredientes;
+    }
+
+    public void setIngredientes(ArrayList<String> ingredientes) {
+        this.ingredientes = ingredientes;
+    }
+
+    public int getCantidadIngredientes() {
+        return cantidadIngredientes;
+    }
+
+    public void setCantidadIngredientes(int cantidadIngredientes) {
+        this.cantidadIngredientes = cantidadIngredientes;
+    }
+
+    public double getPrecioTotal() {
+        return precioTotal;
+    }
+
+    public void setPrecioTotal(double precioTotal) {
+        this.precioTotal = precioTotal;
+    }
+
+    @Override
+    public String toString() {
+        return mensaje;
+    }
+    
+
 }
