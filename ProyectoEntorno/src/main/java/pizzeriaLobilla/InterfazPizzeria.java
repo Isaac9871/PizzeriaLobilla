@@ -25,6 +25,14 @@ public class InterfazPizzeria {
         PizzaBase base = new PizzaBase();
         PizzaPericolosa peri = new PizzaPericolosa();
         PizzaLobilla lobi = new PizzaLobilla();
+        
+        //Menú inicial para elegir entre las diferentes pizzas
+           System.out.println("Pizzeria Lobilla, que deseas?:\n"
+                + "1-Pizza Basica\n"
+                + "2-PizzaLobilla\n"
+                + "3-PizzaPericolosa");
+        opcion = teclado.nextInt();
+        
     }
     
 }
