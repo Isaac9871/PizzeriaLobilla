@@ -10,5 +10,9 @@ package pizzeriaLobilla;
  * @author Isaac
  */
 public class InterfazPizzeria {
+    //Método main
+    public static void main(String[] args) {
+        
+    }
     
 }
