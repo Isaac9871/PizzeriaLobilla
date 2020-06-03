@@ -36,59 +36,78 @@ public class PizzaBase {
         ingredientes.add("Tomate");
         ingredientes.add("Mozzarela");
     }
-    
-    
+
     //Método donde guardaremos los ingredientes en la arrayList creada anteriormente
-      public void añadirIngredientes(int num) {
-          //Para controlar que no se puedan añadir más ingredientes de los permitidos
-            try {
-                if(ingredientes.size() >= control){
-                    throw new IndexOutOfBoundsException("");
-                }
-                //Todos los ingredientes disponibles
-                switch (num) {
-                    case 1:
-                        ingredientes.add("Barbako");
-                        break;
+    public void añadirIngredientes(int num) {
+        //Para controlar que no se puedan añadir más ingredientes de los permitidos
+        try {
+            if (ingredientes.size() >= control) {
+                throw new IndexOutOfBoundsException("");
+            }
+            //Todos los ingredientes disponibles
+            switch (num) {
+                case 1:
+                    ingredientes.add("Barbako");
+                    break;
 
-                    case 2:
-                        ingredientes.add("Verdura");
-                        break;
+                case 2:
+                    ingredientes.add("Verdura");
+                    break;
 
-                    case 3:
-                        ingredientes.add("Queso");
-                        break;
+                case 3:
+                    ingredientes.add("Queso");
+                    break;
 
-                    case 4:
-                        ingredientes.add("Peperonni");
-                        break;
+                case 4:
+                    ingredientes.add("Peperonni");
+                    break;
 
-                    case 5:
-                        ingredientes.add("Gambas");
-                        break;
+                case 5:
+                    ingredientes.add("Gambas");
+                    break;
 
-                    case 6:
-                        ingredientes.add("Atun");
-                        break;
+                case 6:
+                    ingredientes.add("Atun");
+                    break;
 
-                    case 7:
-                        ingredientes.add("Piña");
-                        break;
+                case 7:
+                    ingredientes.add("Piña");
+                    break;
 
-                    case 8:
-                        ingredientes.add("Bacon");
-                        break;
+                case 8:
+                    ingredientes.add("Bacon");
+                    break;
 
-                    case 9:
-                        ingredientes.add("Jamón");
-                        break;
-                }
-                //Mensaje que nos envia al usuario cuando se sobrepasa el limite de ingredientes añadidos
-            } catch (IndexOutOfBoundsException ioobe) {
-                System.err.println("Demasiados ingredientes añadidos\n"
-                        + "Pulsa 0 para continuar con la compra:");
+                case 9:
+                    ingredientes.add("Jamón");
+                    break;
+            }
+            //Mensaje que nos envia al usuario cuando se sobrepasa el limite de ingredientes añadidos
+        } catch (IndexOutOfBoundsException ioobe) {
+            System.err.println("Demasiados ingredientes añadidos\n"
+                    + "Pulsa 0 para continuar con la compra:");
+        }
+
+    }
+
+    /*Método donde meteremos el calculo para calcular el precio de las pizzas
+          según los ingredientes que añadamos*/
+    public double precioFinal() {
+        //Mensaje inicial
+        mensaje = "Pizza con:\n";
+        /*Bucle for que calculará el precio de todos los ingredientes añadidos*/
+
+        for (int n = 0; n < ingredientes.size(); n++) {
+            if (ingredientes.get(n) != null) {
+                precioTotal += 0.5;
+                mensaje += " " + ingredientes.get(n) + " ";
             }
 
-        
+        }
+        //Mensaje que devuelve al usuario
+        System.out.println(mensaje);
+        //Aqui podemos ver el caculo de todos los ingredientes añadidos más el precio inicial de la pizza
+        return precioTotal = precioTotal + precio;
+
     }
 }
