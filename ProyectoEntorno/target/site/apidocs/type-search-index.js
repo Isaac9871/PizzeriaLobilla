@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"pizzeriaLobilla","l":"InterfazPizzeria"},{"p":"pizzeriaLobilla","l":"PizzaBase"},{"p":"pizzeriaLobilla","l":"PizzaLobilla"},{"p":"pizzeriaLobilla","l":"PizzaPericolosa"}]
